@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Event search page.</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/event_page.css" >
+    <link rel="stylesheet" type="text/css" href="/static/css/search_result.css" >
+</head>
+
+<body>
+    <div class="search-box blur-box">
+        <div class="box-title">
+            <h1>Events Search</h1>
+        </div>
+        <form method="get">
+            <div class="box-content">
+            <div class="Keyword input-field" required>
+                <div>Keyword</div>
+                <input class="Keyword tooltip" name="Keyword" id="Keyword">
+                <div class="remainder tip-text" style="display:none">⚠ This field is required. </div>
+            </div>
+            <div class="Distance input-field">
+                <div>Distance (miles)</div>
+                <input type="number" name="Distance" id="Distance" class="Distance" placeholder="10">
+            </div>
+            <div class="Category input-field">
+                <div>Category</div>
+                <div class="select">
+                    <select name="Category" id="Category">
+                    <option value="Default">Default</option>
+                    <option value="Music">Music</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Theatre">Theatre</option>
+                    <option value="Film">Film</option>
+                    <option value="Misc">Miscellaneous</option>
+                    </select>
+                </div>
+            </div>
+            <div class="Location input-field">
+                <div>Location&nbsp;
+                    <input type="checkbox" name="auto-detect" id="auto-detect" class='auto-detect'>
+                    Auto-Detect Location
+                </div>
+                <input type="text" name="Location" id="Location" class="Location tooltip">
+                <div class="remainder tip-text" style="display: none">⚠  This field is required. </div>
+            </div>
+            </div>
+            <div class="submission">
+                <button type="submit" class="submit"> Submit </button>
+                <button type="button" class="clear">Clear</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="result-box">
+        <table class="search-result">
+        </table>
+    </div>
+
+    <div class="detailed-card">
+        <div class="event-detail blur-box" style="display:none">
+        </div>
+
+        <div class="arrow" style="display:none">
+            <div> Show Venue Details </div>
+            <div class="img">
+                <img src="../static/pic/chevron-down-thin.png" class="icon">
+            </div>
+        </div>
+
+        <div class="event-detail venue-detail"  style="display:none;">
+            <div class="inner-box">
+                <div class="box-title">
+                    <h1>Concert Hall</h1>
+                </div>
+                <div class="card-content">
+                    <div class="left">
+                        <div class="Address">
+                            <div class="label">Address: &nbsp;</div>
+                            <div class="data">
+                                <div class="st-line1">111 S Normandie Ave</div>
+                                <div class="st-line2">Los Angeles, CA</div>
+                                <div class="zip-code">90007</div>
+                                <div class="link map"><a href="" target="_blank">Open in Goole Maps</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right link">
+                        <a href="" target="_blank">More events at this venue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="/static/js/content-display.js"></script>
+<script src="/static/js/search-box.js"></script>
+
+</html>
